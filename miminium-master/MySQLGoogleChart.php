@@ -198,6 +198,11 @@ $jsonTable4 = json_encode($table4);
 
         dashboard.bind(donutRangeSlider, pieChart);
         dashboard.draw(data);
+
+        changeOptions = function() {
+            pieChart.setOption('is3D', true);
+            pieChart.draw();
+        }
     }
 
     //Bar Chart (Total Value of Students Frustration and Boredness)
@@ -222,7 +227,7 @@ $jsonTable4 = json_encode($table4);
             'containerId':'chart_div1',
             'options':{
                 'width': 500,
-                'height': 500,
+                'height': 550,
                 'legend': 'right'
             }
         });
